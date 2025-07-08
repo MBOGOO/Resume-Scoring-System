@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume Scoring System</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom Styles -->
+    <style>
+        body {
+            background: linear-gradient(135deg, #0d6efd 20%, #6610f2 100%);
+            min-height: 100vh;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(8px);
+            border: none;
+            padding: 2rem;
+            border-radius: 1rem;
+        }
+        h1 {
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .form-control {
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+        }
+        .form-control::file-selector-button {
+            background: white;
+            color: #0d6efd;
+        }
+        .btn-primary {
+            background: #0d6efd;
+            border: none;
+        }
+        .footer {
+            margin-top: 1rem;
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card text-center col-10 col-md-6">
+        <h1>Resume Scoring System</h1>
+        <p class="mb-4">Upload your resume to get instant scoring & feedback</p>
+        <form action="/score" method="post" enctype="multipart/form-data">
+            <div class="mb-3">
+                <input class="form-control" type="file" name="resume" accept=".pdf,.doc,.docx" required>
+            </div>
+            <button class="btn btn-primary btn-lg w-100" type="submit">Analyze Resume</button>
+        </form>
+        <div class="footer">
+            &copy; 2025 Resume Scorer. Powered by AI & Python.
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
